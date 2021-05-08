@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    
   <category>
     <pattern>*</pattern>
     <template>I have no answer for that.</template>
   </category>
- 
+  
   <category>
-      <pattern>MY NAME IS * </pattern>
-      <template>Hello <set name="firstname"> <star/> </set> . </template>
+      <pattern>HI</pattern>
+      <template>
+          <random>
+              <li>Hello</li>
+              <li>Hey there</li>
+              <li>Hiii!</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>HELLO</pattern>
+      <template><srai>HI</srai></template>
+  </category>
+  
+  <category>
+      <pattern>MY NAME IS * *</pattern>
+      <template>Hello <set name="firstname"> <star/> </set> <set name="surname"> <star index="2"/></set>. </template>
   </category>
   
   <category>
       <pattern>WHAT IS MY NAME</pattern>
-      <template>Your name is <get name="firstname"/> </template>
+      <template>Your name is <get name="firstname"/><get name="surname"/> </template>
   </category>
   
+ 
+ <category>
+     <pattern>ASK ME A QUESTION</pattern>
+     <template>
+         Do you like the beach?
+     </template>
+ </category>
+ 
+  <category>
+     <that>DO YOU LIKE *</that>
+     <pattern>YES</pattern>
+     <template>What do you like about <thatstar/></template>
+ </category>
+ 
+ <category>         
+     <that>DO YOU LIKE *</that>
+     <pattern>NO</pattern>
+     <template>Aw that is a shame!</template>
+ </category>
+ 
+ <category>
+     <pattern>ASK ME ANOTHER QUESTION</pattern>
+     <template>
+         What is it you desire? 
+     </template>
+ </category>
+ 
+ <category>
+     <that>WHAT IS IT YOU DESIRE</that>
+     <pattern>*</pattern>
+     <template>Is there a reason why?</template>
+ </category>
+ 
+ <category>
+      <pattern>ROLL A DICE</pattern>
+      <template>
+          The result after rolling is: 
+          <think>
+              <set name="result">
+                  <random>
+                      <li> 1</li>
+                      <li> 2</li>
+                      <li> 3</li>
+                      <li> 4</li>
+                      <li> 5</li>
+                      <li> 6</li>
+                  </random>
+            </set>
+          </think>
+          <get name="result"/>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>PREVIOUS RESULT</pattern>
+      <template>Your previous result was : <get name="result"/></template>
+  </category>
 </aiml>
