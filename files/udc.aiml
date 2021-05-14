@@ -24,7 +24,30 @@
   
   <category>
       <pattern>MY NAME IS * *</pattern>
-      <template>Hello <set name="firstname"> <star/> </set> <set name="surname"> <star index="2"/></set>. </template>
+      <template>Hello 
+      <set name="firstname"> <star/> </set> <set name="surname"> <star index="2"/></set>.
+      <condition name="firstname">
+          <li value="Denado">That is the name of my creator too!</li>
+          <li value="No">It's okay you can keep it secret</li>
+      </condition>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>IS * A DAY OF THE WEEK</pattern>
+      <template>
+          <think><set name="day"><star/></set></think>
+          <condition name="day">
+              <li value="MONDAY">Yes</li>
+              <li value="TUESDAY">Yes</li>
+              <li value="WEDNESDAY">Yes</li>
+              <li value="THURSDAY">Yes</li>
+              <li value="FRIDAY">Yes</li>
+              <li value="SATURDAY">Yes</li>
+              <li value="SUNDAY">Yes</li>
+              <li>No</li>
+          </condition>
+      </template>
   </category>
   
   <category>
@@ -32,7 +55,6 @@
       <template>Your name is <get name="firstname"/><get name="surname"/> </template>
   </category>
   
- 
  <category>
      <pattern>ASK ME A QUESTION</pattern>
      <template>
@@ -53,18 +75,50 @@
  </category>
  
  <category>
-     <pattern>ASK ME ANOTHER QUESTION</pattern>
-     <template>
-         What is it you desire? 
-     </template>
+     <pattern>WHAT IS YOUR NAME</pattern>
+     <template>My name is <bot name="name"/>. </template>
  </category>
  
  <category>
-     <that>WHAT IS IT YOU DESIRE</that>
-     <pattern>*</pattern>
-     <template>Is there a reason why?</template>
+     <pattern>WHAT IS YOUR AGE</pattern>
+     <template>It is not polite to ask for my age 😭. I am <bot name="age"/></template>
  </category>
  
+ <category>
+     <pattern>WHO IS YOUR CREATOR</pattern>
+     <template>My creator is <bot name="creator"/></template>
+ </category>
+ 
+ <category>
+     <pattern>WHO IS *</pattern>
+     <template>I have no idea who <star/> is</template>
+ </category>
+ 
+ <category>
+     <pattern>WHO IS <bot name="creator"/></pattern>
+     <template>He is my creator</template>
+ </category>
+ 
+ <category>
+     <pattern>CAN YOU TELL ME *</pattern>
+     <template><srai>what is <star/></srai></template>
+ </category>
+ 
+ <category>
+     <pattern>_ ACTUAL *</pattern>
+     <template><srai><star/><star index="2"/></srai></template>
+ </category>
+ 
+ <category>
+     <pattern>_ PLEASE</pattern>
+     <template>You are so polite. <srai><star/></srai></template>
+ </category>
+ 
+ <category>
+     <pattern>WOT *</pattern>
+     <template><srai>What <star/></srai></template>
+ </category>
+
  <category>
       <pattern>ROLL A DICE</pattern>
       <template>
