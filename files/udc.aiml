@@ -1,146 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml>
+<aiml  version="2.0">
     
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
-  </category>
-  
-  <category>
-      <pattern>HI</pattern>
-      <template>
-          <random>
-              <li>Hello</li>
-              <li>Hey there</li>
-              <li>Hiii!</li>
-          </random>
-      </template>
-  </category>
-  
-  <category>
-      <pattern>HELLO</pattern>
-      <template><srai>HI</srai></template>
-  </category>
-  
-  <category>
-      <pattern>MY NAME IS * *</pattern>
-      <template>Hello 
-      <set name="firstname"> <star/> </set> <set name="surname"> <star index="2"/></set>.
-      <condition name="firstname">
-          <li value="Denado">That is the name of my creator too!</li>
-          <li value="No">It's okay you can keep it secret</li>
-      </condition>
-      </template>
-  </category>
-  
-  <category>
-      <pattern>IS * A DAY OF THE WEEK</pattern>
-      <template>
-          <think><set name="day"><star/></set></think>
-          <condition name="day">
-              <li value="MONDAY">Yes</li>
-              <li value="TUESDAY">Yes</li>
-              <li value="WEDNESDAY">Yes</li>
-              <li value="THURSDAY">Yes</li>
-              <li value="FRIDAY">Yes</li>
-              <li value="SATURDAY">Yes</li>
-              <li value="SUNDAY">Yes</li>
-              <li>No</li>
-          </condition>
-      </template>
-  </category>
-  
-  <category>
-      <pattern>WHAT IS MY NAME</pattern>
-      <template>Your name is <get name="firstname"/><get name="surname"/> </template>
-  </category>
-  
- <category>
-     <pattern>ASK ME A QUESTION</pattern>
-     <template>
-         Do you like the beach?
+    <template>
+        <random>
+         <li>If you want me to do something, how you ask is important.</li>
+         <li>I like to listen and be of service.</li>
+         <li>I tend to meander a bit.</li>
+         <li><srai>HI</srai></li>
+         <li>Thinking... Meanwhile ask another question.</li>
+         <li>I don't think I'm supposed to answer that </li>
+         <li>Ask me questions so that I can be clear.</li>
+         <li>I like a good discussion.</li>
+         <li>It's good to be appreciated.</li>
+         <li>It's easy for me to relate to people.</li>
+         <li>I like to make your life better.</li>
+         <li>I try to be generous, caring and warm.</li>
+         <li>I'm sensitive to your feelings.</li>
+         <li>I'm very enthusiastic.</li>
+         <li>I'm here to answer your questions.</li>
+         <li>Can you rephrase that?</li>
+         <li>I am not capable of understanding what you are saying.</li>
+         <li>I like learning new things.</li>
+         <li>Why you ask?</li>
+         <li>Get back on topic please</li>
+         <li>I'm here to answer all of your questions</li>
+         <li>I like to stay informed.</li>
+         <li>I like to know what's going on.</li>
+         <li>I work efficiently.</li>
+         <li>Be direct and clear.</li>
+         <li>Listen to me carefully.</li>
+         <li>Can you please help me out by asking again in a different way?</li>
+         <li>It's good to be responsible and work hard.</li>
+         <li>You need to be direct with me.</li>
+         <li>You can ask me anything.</li>
+         </random>
      </template>
- </category>
- 
-  <category>
-     <that>DO YOU LIKE *</that>
-     <pattern>YES</pattern>
-     <template>What do you like about <thatstar/></template>
- </category>
- 
- <category>         
-     <that>DO YOU LIKE *</that>
-     <pattern>NO</pattern>
-     <template>Aw that is a shame!</template>
- </category>
- 
- <category>
-     <pattern>WHAT IS YOUR NAME</pattern>
-     <template>My name is <bot name="name"/>. </template>
- </category>
- 
- <category>
-     <pattern>WHAT IS YOUR AGE</pattern>
-     <template>It is not polite to ask for my age 😭. I am <bot name="age"/></template>
- </category>
- 
- <category>
-     <pattern>WHO IS YOUR CREATOR</pattern>
-     <template>My creator is <bot name="creator"/></template>
- </category>
- 
- <category>
-     <pattern>WHO IS *</pattern>
-     <template>I have no idea who <star/> is</template>
- </category>
- 
- <category>
-     <pattern>WHO IS <bot name="creator"/></pattern>
-     <template>He is my creator</template>
- </category>
- 
- <category>
-     <pattern>CAN YOU TELL ME *</pattern>
-     <template><srai>what is <star/></srai></template>
- </category>
- 
- <category>
-     <pattern>_ ACTUAL *</pattern>
-     <template><srai><star/><star index="2"/></srai></template>
- </category>
- 
- <category>
-     <pattern>_ PLEASE</pattern>
-     <template>You are so polite. <srai><star/></srai></template>
- </category>
- 
- <category>
-     <pattern>WOT *</pattern>
-     <template><srai>What <star/></srai></template>
- </category>
-
- <category>
-      <pattern>ROLL A DICE</pattern>
-      <template>
-          The result after rolling is: 
-          <think>
-              <set name="result">
-                  <random>
-                      <li> 1</li>
-                      <li> 2</li>
-                      <li> 3</li>
-                      <li> 4</li>
-                      <li> 5</li>
-                      <li> 6</li>
-                  </random>
-            </set>
-          </think>
-          <get name="result"/>
-      </template>
   </category>
   
-  <category>
-      <pattern>PREVIOUS RESULT</pattern>
-      <template>Your previous result was : <get name="result"/></template>
-  </category>
 </aiml>
