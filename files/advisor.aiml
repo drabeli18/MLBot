@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
-	
+	<category>
+	    <pattern>^ NOT ^ REGISTERED ^ COURSES ^</pattern>
+	    <template>
+    	    If you do not register your courses within the deadline specified 
+    	    in the academic calendar you pay a fine for each week of delay.<br></br>
+    	    These penalties are shown in your EIS account.
+	    </template>
+    </category>
+    <category>
+        <pattern>^ NOT ^ REGISTER ^ COURSES ^</pattern>
+        <template><srai>^ NOT ^ REGISTERED ^ COURSES ^</srai></template>
+    </category>
 </aiml>

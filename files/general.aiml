@@ -125,8 +125,19 @@
     </category>
     
     <category>
-        <pattern></pattern>
-        <template></template>
+        <pattern>^ TIME ^ LECTURE ^</pattern>
+        <template>
+            To check the timetable follow this link: <br></br>
+        <link>
+            <text>Timetable</text>
+            <url><map name="links">timetable</map></url>
+        </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ TIME ^ COURSE ^</pattern>
+        <template><srai>^ TIME ^ LECTURE ^</srai></template>
     </category>
     
 </aiml>

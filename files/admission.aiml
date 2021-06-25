@@ -20,4 +20,14 @@
             be careful with your choice.
         </template>
     </category>
+    
+    <category>
+        <pattern>^ SCHOLARSHIP OPPORTUNITIES ^</pattern>
+        <template>
+            Epoka University offers Academic Achievements scholarships, Sport scholarships 
+            and Social scholarships each with a certain quota of students. <br></br>
+            For more detailed information on scholarships contact the Admission Office.
+        </template>
+    </category>
+    
 </aiml>
