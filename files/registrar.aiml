@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>^ INTERNAL TRANSFER ^</pattern>
+	    <template>
+	        Students who have completed at least one semester in their programs may apply to the Registrar’s 
+	        Office during the period specified in the academic calendar for transferring to another program within 
+	        the University. <br> </br>
+	        Applications are finalized by the proposal of the department 
+	        to which the student wishes to transfer to and the decision of the relevant Decanate
+	    </template>
+    </category>
+</aiml>
